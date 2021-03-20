@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{42BACEAC-E74E-486F-AABF-48A372E59293}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aark.Epub</RootNamespace>
+    <AssemblyName>Aark.Epub</AssemblyName>
+    <DefaultLanguage>fr-FR</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>16</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|arm64'">
+    <PlatformTarget>arm64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\arm64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|arm64'">
+    <PlatformTarget>arm64</PlatformTarget>
+    <OutputPath>bin\arm64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Entities\EpubBook.cs" />
+    <Compile Include="Entities\EpubByteContentFile.cs" />
+    <Compile Include="Entities\EpubContent.cs" />
+    <Compile Include="Entities\EpubContentFile.cs" />
+    <Compile Include="Entities\EpubContentType.cs" />
+    <Compile Include="Entities\EpubNavigationItem.cs" />
+    <Compile Include="Entities\EpubNavigationItemLink.cs" />
+    <Compile Include="Entities\EpubNavigationItemType.cs" />
+    <Compile Include="Entities\EpubSchema.cs" />
+    <Compile Include="Entities\EpubTextContentFile.cs" />
+    <Compile Include="EpubReader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Readers\BookCoverReader.cs" />
+    <Compile Include="Readers\ContentReader.cs" />
+    <Compile Include="Readers\Epub2NcxReader.cs" />
+    <Compile Include="Readers\Epub3NavDocumentReader.cs" />
+    <Compile Include="Readers\NavigationReader.cs" />
+    <Compile Include="Readers\PackageReader.cs" />
+    <Compile Include="Readers\RootFilePathReader.cs" />
+    <Compile Include="Readers\SchemaReader.cs" />
+    <Compile Include="Readers\SpineReader.cs" />
+    <Compile Include="RefEntities\EpubBookRef.cs" />
+    <Compile Include="RefEntities\EpubByteContentFileRef.cs" />
+    <Compile Include="RefEntities\EpubContentFileRef.cs" />
+    <Compile Include="RefEntities\EpubContentRef.cs" />
+    <Compile Include="RefEntities\EpubNavigationItemRef.cs" />
+    <Compile Include="RefEntities\EpubTextContentFileRef.cs" />
+    <Compile Include="Schema\Common\ManifestProperty.cs" />
+    <Compile Include="Schema\Common\StructuralSemanticsProperty.cs" />
+    <Compile Include="Schema\Ncx\Epub2Ncx.cs" />
+    <Compile Include="Schema\Ncx\Epub2NcxContent.cs" />
+    <Compile Include="Schema\Ncx\Epub2NcxDocAuthor.cs" />
+    <Compile Include="Schema\Ncx\Epub2NcxDocTitle.cs" />
+    <Compile Include="Schema\Ncx\Epub2NcxHead.cs" />
+    <Compile Include="Schema\Ncx\Epub2NcxHeadMeta.cs" />
+    <Compile Include="Schema\Ncx\Epub2NcxNavigationLabel.cs" />
+    <Compile Include="Schema\Ncx\Epub2NcxNavigationList.cs" />
+    <Compile Include="Schema\Ncx\Epub2NcxNavigationMap.cs" />
+    <Compile Include="Schema\Ncx\Epub2NcxNavigationPoint.cs" />
+    <Compile Include="Schema\Ncx\Epub2NcxNavigationTarget.cs" />
+    <Compile Include="Schema\Ncx\Epub2NcxPageList.cs" />
+    <Compile Include="Schema\Ncx\Epub2NcxPageTarget.cs" />
+    <Compile Include="Schema\Ncx\Epub2NcxPageTargetType.cs" />
+    <Compile Include="Schema\Opf\EpubGuide.cs" />
+    <Compile Include="Schema\Opf\EpubGuideReference.cs" />
+    <Compile Include="Schema\Opf\EpubManifest.cs" />
+    <Compile Include="Schema\Opf\EpubManifestItem.cs" />
+    <Compile Include="Schema\Opf\EpubMetadata.cs" />
+    <Compile Include="Schema\Opf\EpubMetadataContributor.cs" />
+    <Compile Include="Schema\Opf\EpubMetadataCreator.cs" />
+    <Compile Include="Schema\Opf\EpubMetadataDate.cs" />
+    <Compile Include="Schema\Opf\EpubMetadataIdentifier.cs" />
+    <Compile Include="Schema\Opf\EpubMetadataMeta.cs" />
+    <Compile Include="Schema\Opf\EpubPackage.cs" />
+    <Compile Include="Schema\Opf\EpubSpine.cs" />
+    <Compile Include="Schema\Opf\EpubSpineItemRef.cs" />
+    <Compile Include="Schema\Opf\EpubVersion.cs" />
+    <Compile Include="Schema\Opf\PageProgressionDirection.cs" />
+    <Compile Include="Schema\Opf\SpineProperty.cs" />
+    <Compile Include="Schema\Ops\Epub3Nav.cs" />
+    <Compile Include="Schema\Ops\Epub3NavAnchor.cs" />
+    <Compile Include="Schema\Ops\Epub3NavDocument.cs" />
+    <Compile Include="Schema\Ops\Epub3NavLi.cs" />
+    <Compile Include="Schema\Ops\Epub3NavOl.cs" />
+    <Compile Include="Schema\Ops\Epub3NavSpan.cs" />
+    <Compile Include="Utils\StringExtensionMethods.cs" />
+    <Compile Include="Utils\UrlParser.cs" />
+    <Compile Include="Utils\VersionUtils.cs" />
+    <Compile Include="Utils\XmlExtensionMethods.cs" />
+    <Compile Include="Utils\XmlUtils.cs" />
+    <Compile Include="Utils\ZipPathUtils.cs" />
+    <EmbeddedResource Include="Properties\Aark.Epub.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.12</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ProjectReunion">
+      <Version>0.5.0-prerelease</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ProjectReunion.Foundation">
+      <Version>0.5.0-prerelease</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ProjectReunion.WinUI">
+      <Version>0.5.0-prerelease</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '$(MinimumVisualStudioVersion)' ">
+    <VisualStudioVersion>$(MinimumVisualStudioVersion)</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
