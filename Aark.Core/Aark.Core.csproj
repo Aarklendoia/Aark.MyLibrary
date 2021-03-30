@@ -103,7 +103,7 @@
       <Version>6.2.12</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.ProjectReunion">
-      <Version>0.5.0</Version>
+      <Version>0.5.0-prerelease</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.ProjectReunion.Foundation">
       <Version>0.5.0</Version>
