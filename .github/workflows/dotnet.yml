@@ -12,10 +12,10 @@ jobs:
     runs-on: windows-latest
  
     steps:
-    - name: Checkout source
+    - name: Checkout Code
       uses: actions/checkout@v2
       
-    - name: setup-msbuild
+    - name: Setup MSBuild Path
       uses: microsoft/setup-msbuild@v1
        
     - name: Setup NuGet.exe for use with actions
@@ -25,7 +25,7 @@ jobs:
       run: nuget restore Aark.MyLibrary.sln
  
     - name: Build and Publish Web App
-      run: msbuild Aark.MyLibrary.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
+      run: msbuild Aark.MyLibrary.sln /p:Configuration=Release /p:Platform=X64
  
     - name: Upload Artifact
       uses: actions/upload-artifact@v1.0.0
