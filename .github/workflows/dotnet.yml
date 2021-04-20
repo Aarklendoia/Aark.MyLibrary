@@ -24,11 +24,11 @@ jobs:
     - name: Restore NuGet Packages
       run: nuget restore Aark.MyLibrary.sln
  
-    - name: Build and Publish Web App
+    - name: Build App
       run: msbuild Aark.MyLibrary.sln /p:Configuration=Release /p:Platform=X64
  
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v1.0.0
-      with:
-        name: published_webapp
-        path: bin\Release\Publish
+#     - name: Upload Artifact
+#       uses: actions/upload-artifact@v1.0.0
+#       with:
+#         name: published_webapp
+#         path: bin\Release\Publish
